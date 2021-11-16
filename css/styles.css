@@ -2,6 +2,8 @@
     --text-color: #757575;
     --background-color:#F5F4FA;
     --header-background-color:#FFFFFF;
+    --header-border:#ECECEC;
+    --portfolio-border:#EEEEEE;
     --hero-background-color:#2F303A;
     --footer-background-color:#2F303A;
     --title-text-color: #212121;
@@ -25,8 +27,25 @@ body{
   /*----------------------------------------*/
     color: var(--text-color, black);
 }
-
-
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+.container{
+   padding-left: 15px;
+   padding-right: 15px;
+    width: 1200px;
+    margin: 0 auto;
+    
+}
 .link{
     color: inherit;
     text-decoration: none;
@@ -41,26 +60,39 @@ body{
     line-height: 1.19;
     letter-spacing: 0.03;
     text-decoration: none;
+    margin-right: 93px;
 }
 .logo-color{
     color: var(--logo-blue-color, blue);
 }
-.container{
-    margin:0 auto;
-    width: 1200px;
-    
-}
-/*---------------HEADER------------------------------------------*/
 
+/*---------------HEADER------------------------------------------*/
+.header{
+    padding: 25px 0;
+    border-bottom: var(--header-border) solid 1px;
+}
 .logo-nav{
     color: var(--logo-black-color, black);
 }
+.header-container{
+    display: flex;
+    align-items: center;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+}
+.header-nav-item:not(:last-child){
+    margin-right: 50px;
+}
+
 .menu-nav{
     font-family: var(--main-font, sans-serif); 
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    display: flex;
     color: var(--title-text-color, black);
 }
 .mail-tel-header{
@@ -69,7 +101,13 @@ body{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    display: flex;
+    margin-left: auto;
 }
+.header-item:not(:first-child){
+    margin-left: 50px;
+}
+
 .link-menu-nav:hover,
 .link-menu-nav:focus{
     color: var(--active-color, blue);
@@ -86,7 +124,13 @@ body{
 
 /*---------------MAIN-INDEX-----------------------------------------*/
 .hero{
+    padding-top: 200px;
+    padding-bottom: 280px;
     background-color: var(--hero-background-color);
+}
+.hero-container{
+    display: flex;
+flex-direction: column;
 }
 .title-hero{
     font-family: var(--main-font, sans-serif);
@@ -97,6 +141,7 @@ body{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--logo-white-color, white);
+text-align: center;
 }
 .button-hero{
     font-family: var(--main-font, sans-serif);
@@ -107,9 +152,16 @@ body{
     letter-spacing: 0.06em;
     background-color: var(--background-button-color-blue, blue);
     color: var(--text-button-color, white);
-    border-color:  var(--background-button-color-blue, blue);
     border-radius: 4px;
     cursor:pointer;
+    width: 200px;
+align-self: center;
+margin-top: 30px;
+border: none;
+   
+}
+.about-uns{
+    padding: 94px 0;
 }
 .title-about-uns{
     font-family: var(--main-font, sans-serif);
@@ -125,6 +177,17 @@ body{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+    margin-top: 10px;
+}
+.about-list{
+    display: flex;
+}
+.about-item:not(:last-child){
+    margin-right: 30px;
+}
+
+.services{
+    padding-bottom: 94px;
 }
 .title-services{
     font-family: var(--main-font, sans-serif);
@@ -132,9 +195,19 @@ body{
     font-size: 36px;
     line-height:1.16;
     letter-spacing: 0.03em;
+    text-align: center;
     color:var(--title-text-color, black);
 }
+.services-list{
+    display: flex;
+    margin-top: 50px;
+}
+.services-item:not(:last-child){
+    margin-right: 30px;
+}
+
 .our-team{
+   padding: 94px 0 ;
     background:var(--background-color, grey);
 }
 .title-our-team{
@@ -143,7 +216,27 @@ body{
     font-size: 36px;
     line-height: 1.16;
     letter-spacing: 0.03em;
+    text-align: center;
     color:var(--title-text-color, black);
+}
+.team-list{
+    display: flex;
+    margin-top: 50px;
+    text-align: center;
+       
+}
+.team-item{
+    border-right:var(--portfolio-border) 1px solid ;
+    border-left:var(--portfolio-border) 1px solid ;
+    border-bottom:var(--portfolio-border) 1px solid ;
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team-item:not(:last-child){
+    margin-right: 30px;
+}
+.thumb{
+    padding: 30px 0;
 }
 .specialist-name{
     font-family: var(--main-font, sans-serif);
@@ -159,11 +252,21 @@ body{
     font-size: 16px;
     line-height: 1.18;
     letter-spacing: 0.03em;
+    margin-top: 10px;
 }
 /*---------------MAIN-INDEX--------------------------------------*/
 
 
 /*---------------MAIN-PORTFOLIO----------------------------------*/
+.portfolio{
+    padding: 94px 0;
+}
+.btn-list{
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    
+}
 .button{
     font-family:var(--main-font,sans-serif);
     font-style:normal;
@@ -173,15 +276,35 @@ body{
     letter-spacing:0.03em;
     color:var(--title-text-color,black);
     background-color:var(--background-button-color, grey);
-    border-color: var(--background-button-color, grey);
+    border: none;
     border-radius: 4px;
     cursor:pointer;
+}
+.btn:not(:last-child){
+    margin-right: 8px;
 }
 .button:hover,
 .button:focus{
     background-color:var(--active-color, blue);
     color:var(--text-button-color,white);
-    border-color:var(--active-color, blue);
+   
+}
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+.portfolio-list-item{
+    border-right:var(--portfolio-border) 1px solid ;
+    border-left:var(--portfolio-border) 1px solid ;
+    border-bottom:var(--portfolio-border) 1px solid ;
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.thumb-portfolio{
+    padding: 20px 24px;
 }
 .title-portfolio-list{
     font-family:var(--main-font,sans-serif);
@@ -196,6 +319,7 @@ body{
     font-size: 16px;
     line-height: 1.83;
     letter-spacing: 0.03em;
+    margin-top: 4px;
 }
 
 /*---------------MAIN-PORTFOLIO----------------------------------*/
@@ -203,8 +327,10 @@ body{
 
 /*---------------FOOTER------------------------------------------*/
 .footer{
+   padding: 60px 0;
     background-color: var(--footer-background-color);
 }
+
 .logo-footer{
     color: var(--logo-white-color, white);
 }
@@ -216,10 +342,8 @@ body{
     line-height: 1.71;
     letter-spacing: 0.03em;
     color:var(--text-footer-color, white);
+margin-top: 20px;
 }
 .footer-mail-tel{
     color: var(--text-footer-tel-mail-color);
-}
-.footer-mail-tel:hover{
-    color: var(--active-color, blue);
 }
