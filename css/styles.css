@@ -128,10 +128,7 @@ img{
     padding-bottom: 280px;
     background-color: var(--hero-background-color);
 }
-.hero-container{
-    display: flex;
-flex-direction: column;
-}
+
 .title-hero{
     font-family: var(--main-font, sans-serif);
     font-style: normal;
@@ -154,13 +151,13 @@ text-align: center;
     color: var(--text-button-color, white);
     border-radius: 4px;
     cursor:pointer;
-align-self: center;
-margin-top: 30px;
-border: none;
-padding: 10px 32px;
+    display: block; 
+    margin: 30px auto 0;
+    border: none;
+    padding: 10px 32px;
    
 }
-.about-uns{
+.section{
     padding: 94px 0;
 }
 .title-about-uns{
@@ -207,7 +204,6 @@ padding: 10px 32px;
 }
 
 .our-team{
-   padding: 94px 0 ;
     background:var(--background-color, grey);
 }
 .title-our-team{
@@ -226,9 +222,6 @@ padding: 10px 32px;
        
 }
 .team-item{
-    border-right:var(--portfolio-border) 1px solid ;
-    border-left:var(--portfolio-border) 1px solid ;
-    border-bottom:var(--portfolio-border) 1px solid ;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -344,6 +337,9 @@ padding: 10px 32px;
     letter-spacing: 0.03em;
     color:var(--text-footer-color, white);
 margin-top: 20px;
+}
+.footer-item:not(:first-child){
+    margin-top: 9px;
 }
 .footer-mail-tel{
     color: var(--text-footer-tel-mail-color);
